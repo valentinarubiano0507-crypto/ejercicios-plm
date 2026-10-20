@@ -1,0 +1,323 @@
+1. 
+edad = int(input("Digite su edad: "))
+
+if edad >= 18:
+    print("Es mayor de edad")
+else:
+    print("Es menor de edad")
+	
+	
+2. 
+numero = int(input("Digite un número entero: "))
+
+if numero > 0:
+    print("El número es positivo")
+elif numero < 0:
+    print("El número es negativo")
+else:
+    print("El número es cero")
+	
+	
+3.
+numero = int(input("Digite un número entero: "))
+
+if numero % 2 == 0:
+    print("El número es par")
+else:
+    print("El número es impar")
+	
+	
+4. 
+numero1 = int(input("Digite el primer número: "))
+numero2 = int(input("Digite el segundo número: "))
+numero3 = int(input("Digite el tercer número: "))
+
+if numero1 > numero2 and numero1 > numero3:
+    print("El mayor es:", numero1)
+elif numero2 > numero1 and numero2 > numero3:
+    print("El mayor es:", numero2)
+else:
+    print("El mayor es:", numero3)
+	
+	
+5.
+nota = float(input("Digite la calificación de 0.0 a 5.0: "))
+
+if nota >= 3.5 and nota <= 5.0:
+    print("Aprobado")
+elif nota >= 0 and nota < 3.5:
+    print("No aprobado")
+else:
+    print("Calificación inválida")
+	
+	
+6. 
+compra = float(input("Digite el valor de la compra: "))
+
+if compra > 200000:
+    descuento = compra * 0.20
+elif compra > 100000:
+    descuento = compra * 0.10
+else:
+    descuento = 0
+
+total = compra - descuento
+print("Descuento:", descuento)
+print("Total a pagar:", total)
+
+
+7. 
+edad = int(input("Digite la edad: "))
+
+if edad < 12:
+    print("Niño")
+elif edad <= 17:
+    print("Adolescente")
+elif edad <= 59:
+    print("Adulto")
+else:
+    print("Adulto mayor")
+	
+	
+8. 
+clave = input("Digite la contraseña: ")
+
+if clave == "Sena2026":
+    print("Acceso concedido")
+else:
+    print("Acceso denegado")
+	
+	
+9.
+anio = int(input("Digite un año: "))
+
+if anio % 400 == 0 or (anio % 4 == 0 and anio % 100 != 0):
+    print("El año es bisiesto")
+else:
+    print("El año no es bisiesto")
+	
+	
+10. 
+numero1 = float(input("Digite el primer número: "))
+numero2 = float(input("Digite el segundo número: "))
+operador = input("Digite el operador (+, -, *, /): ")
+
+if operador == "+":
+    print("Resultado:", numero1 + numero2)
+elif operador == "-":
+    print("Resultado:", numero1 - numero2)
+elif operador == "*":
+    print("Resultado:", numero1 * numero2)
+elif operador == "/":
+    if numero2 != 0:
+        print("Resultado:", numero1 / numero2)
+    else:
+        print("No se puede dividir entre cero")
+else:
+    print("Operador inválido")
+Bloque 2: Ciclos for y while
+
+
+11.
+for numero in range(1, 21):
+    print(numero, end=" ")
+print()
+
+
+12. 
+for numero in range(10, 0, -1):
+    print(numero, end=" ")
+print()
+
+
+13.
+numero = int(input("Digite un número: "))
+
+for i in range(1, 11):
+    print(numero, "x", i, "=", numero * i)
+	
+	
+14. 
+n = int(input("Digite un número entero positivo: "))
+suma = 0
+
+for i in range(1, n + 1):
+    suma = suma + i
+
+print("La suma es:", suma)
+
+
+15.
+for numero in range(5, 101, 5):
+    print(numero, end=" ")
+print()
+
+
+16.
+numero = int(input("Digite un número entero positivo: "))
+factorial = 1
+
+if numero < 0:
+    print("No se puede calcular el factorial de un número negativo")
+else:
+    for i in range(1, numero + 1):
+        factorial = factorial * i
+    print("El factorial es:", factorial)
+	
+	
+17. 
+for i in range(1, 11):
+    print("2 elevado a", i, "=", 2 ** i)
+18. Patrón de asteriscos
+filas = int(input("Digite el número de filas: "))
+
+for i in range(1, filas + 1):
+    print("*" * i)
+	
+	
+19. 
+for numero in range(5, 0, -1):
+    print(numero)
+
+print("¡Despegue!")
+
+
+20. 
+clave = input("Digite la clave numérica: ")
+
+while clave != "1234":
+    print("Clave incorrecta")
+    clave = input("Intente nuevamente: ")
+
+print("Bienvenido")
+Ejercicio adicional. Intentos limitados de inicio de sesión
+clave_correcta = "1234"
+intentos = 0
+acceso = False
+
+while intentos < 3 and acceso == False:
+    clave = input("Digite la clave: ")
+    intentos = intentos + 1
+
+    if clave == clave_correcta:
+        acceso = True
+    else:
+        print("Clave incorrecta")
+
+if acceso:
+    print("Acceso concedido")
+else:
+    print("Cuenta bloqueada")
+Bloque 3: Ciclos for con condicionales
+
+
+21. 
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+pares = []
+impares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        pares.append(numero)
+    else:
+        impares.append(numero)
+
+print("Pares:", pares)
+print("Impares:", impares)
+
+
+22.
+frase = input("Digite una palabra o frase: ").lower()
+vocales = 0
+
+for letra in frase:
+    if letra in "aeiou":
+        vocales = vocales + 1
+
+print("Cantidad de vocales:", vocales)
+
+
+23. 
+notas = [3.0, 4.2, 2.8, 3.9, 4.8, 1.5]
+aprobados = 0
+reprobados = 0
+
+for nota in notas:
+    if nota >= 3.5:
+        aprobados = aprobados + 1
+    else:
+        reprobados = reprobados + 1
+
+print("Aprobados:", aprobados)
+print("Reprobados:", reprobados)
+
+
+24. 
+for numero in range(1, 31):
+    if numero % 3 == 0:
+        continue
+    print(numero)
+	
+	
+25. 
+nombres = ["Laura", "Andrés", "Mariana", "Carlos", "David"]
+
+for nombre in nombres:
+    if nombre == "Carlos":
+        print("Aprendiz encontrado")
+        break
+		
+		
+26.
+numeros = [5, -2, 8, -7, 3, -1]
+suma = 0
+
+for numero in numeros:
+    if numero > 0:
+        suma = suma + numero
+
+print("Suma de positivos:", suma)
+
+
+27.
+correos = ["laura@gmail.com", "andreshotmail.com", "maria@correo", "david@sena.edu.co"]
+
+for correo in correos:
+    if "@" in correo and "." in correo:
+        print(correo, "tiene un formato válido")
+    else:
+        print(correo, "no tiene un formato válido")
+		
+		
+28.
+for numero in range(2, 51):
+    primo = True
+
+    for divisor in range(2, numero):
+        if numero % divisor == 0:
+            primo = False
+            break
+
+    if primo:
+        print(numero)
+		
+		
+29.
+asistencia = [True, False, True, True, False]
+presentes = 0
+
+for estado in asistencia:
+    if estado == True:
+        presentes = presentes + 1
+
+porcentaje = (presentes / len(asistencia)) * 100
+print("Porcentaje de asistencia:", porcentaje, "%")
+
+
+30.
+productos = [("Mouse", 15), ("Teclado", 3), ("Monitor", 8), ("Cable HDMI", 2)]
+
+for producto, cantidad in productos:
+    print(producto, ":", cantidad, "unidades")
+    if cantidad < 5:
+        print("Stock crítico")
